@@ -6179,7 +6179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1617780879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7411,6 +7411,7 @@ MonoBehaviour:
   healthText: {fileID: 348231390}
   winLoseText: {fileID: 1498386431}
   winLoseBG: {fileID: 1617780880}
+  ohHiHey: {fileID: 0}
 --- !u!1 &1929027902
 GameObject:
   m_ObjectHideFlags: 0

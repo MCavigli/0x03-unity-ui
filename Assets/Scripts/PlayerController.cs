@@ -14,16 +14,15 @@ public class PlayerController : MonoBehaviour
 	public Text winLoseText;
 	public Image winLoseBG;
 
-	void Start()
-	{
-		winLoseBG.enabled = false;
-	}
+	// void Start()
+	// {
+	// 	winLoseBG.enabled = false;
+	// }
 	void Update()
 	{
 		if (health == 0)
 		{
 			// Debug.Log("Game Over!");
-			winLoseBG.enabled = true;
 			Death();
 			StartCoroutine(LoadScene(3));
 		}
@@ -68,7 +67,6 @@ public class PlayerController : MonoBehaviour
 		}
 		if (other.tag == "Goal")
 		{
-			winLoseBG.enabled = true;
 			SetWin();
 			// Debug.Log("You win!");
 		}
@@ -86,12 +84,14 @@ public class PlayerController : MonoBehaviour
 		winLoseText.text = "You Win!";
 		winLoseText.color = Color.black;
 		winLoseBG.color = Color.green;
+		winLoseBG.gameObject.SetActive(true);
 	}
 	void Death()
 	{
 		winLoseText.text = "Game Over!";
 		winLoseText.color = Color.white;
 		winLoseBG.color = Color.red;
+		winLoseBG.gameObject.SetActive(true);
 		health = 5;
 		score = 0;
 	}
